@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::get('/produtos/novo', 'ProdutosController@create');
 Route::post('/produtos/novo', 'ProdutosController@store')->name('registrar_produto');
+Route::get('/produtos/lista/{id}', 'ProdutosController@show');

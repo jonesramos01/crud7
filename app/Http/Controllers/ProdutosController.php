@@ -22,4 +22,8 @@ class ProdutosController extends Controller
        ]);
        return "Produto cadastrado com sucesso!";
    }
+   public function show($id) {
+       $produto = Produto::findOrFail($id);
+       return view ('produtos.lista', ['produto' => $produto]);
+   }
 }
